@@ -1,0 +1,25 @@
+{
+    "manifest_version":2,
+    "version": "1.0",
+    "name": "Creation Edges Ext.",
+    "browser_action":{
+        "default_icon": "default.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "persistent": true,
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["jquery-3.4.1.min.js", "content.js"]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "storage"
+    ]
+}
