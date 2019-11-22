@@ -9,6 +9,15 @@ var bDesc = document.getElementById("bdesc");
 var bImg = document.getElementById("BlogThumb");
 var bchangeBut = document.getElementById("ranImg");
 
+var picUpload = document.getElementById("uploadPic");
+picUpload.addEventListener("change", function(e){
+    const file = e.target.files[0];
+    const imgnewURL = URL.createObjectURL(file);
+    bImg.src = imgnewURL;
+    bImgURl.value = imgnewURL;
+});
+
+
 bchangeBut.addEventListener("click", test);
 let cliks = 0;
 
