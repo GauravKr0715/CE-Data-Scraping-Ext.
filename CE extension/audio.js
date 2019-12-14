@@ -11,7 +11,7 @@ let audioSaved = document.getElementById('savedAudio');
         let recState = 0;
 
         const uploadAudio = document.getElementById('uploadAudio');
-        
+        //alert(uploadAudio);
       
         uploadAudio.addEventListener('change', function(e) {
           const file = e.target.files[0];
@@ -78,7 +78,7 @@ let audioSaved = document.getElementById('savedAudio');
                     recState = 0;
                     start.src = "https://img.icons8.com/carbon-copy/100/000000/microphone.png"
                     mediaRecorder.stop();
-                    onsole.log(mediaRecorder.state);
+                    console.log(mediaRecorder.state);
                 }
             })
             // stop.addEventListener('click', (ev)=>{
