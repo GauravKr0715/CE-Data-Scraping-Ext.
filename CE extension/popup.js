@@ -2,6 +2,11 @@
 var buttonOnPage = document.getElementById("somebutton");
 buttonOnPage.addEventListener("click", test);
 
+var micAccessButton = document.getElementById("micAccess");
+// alert(micAccessButton);
+micAccessButton.addEventListener("click", openMicPage);
+
+
 var bTitle = document.getElementById("btitle");
 var bURL = document.getElementById("burl");
 var bImgURl = document.getElementById("bimgurl");
@@ -59,6 +64,11 @@ chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
 
 // }
 
+function openMicPage() {
+    //alert("hello?!");
+    chrome.runtime.sendMessage({type: "openMicPage"});
+}
+
 function test(){
     cliks++;
 
@@ -81,7 +91,13 @@ function test(){
             bImg.src = dataScraped.imgsrc;
         });
 
+        // chrome.runtime.sendMessage({type: "openMicPage"}, function (greeting){
+        //     alert("back to home");
+        // });
+
     }
+
+
 
 // function Response(dataScraped) {
 //     alert(dataScraped.mainTitle);

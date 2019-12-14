@@ -30,6 +30,14 @@ chrome.runtime.onMessage.addListener(
 
             sendResponse(data);
             break; 
+        case "openMicPage":
+            //console.log("Hellosnvdljnbvsld");
+            chrome.tabs.create({
+                active: true,
+                url: 'enableMicrophone.html'
+            }, null);
+            //sendResponse("hellooooo");
+            break;
         // case "updateImg":
         //     data["imgsrc"] = message.data.imgsrc;       
     }
