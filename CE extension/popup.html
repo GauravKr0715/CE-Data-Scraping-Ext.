@@ -1,45 +1,100 @@
 <!doctype html>
 <html>
     <head>
-
-        
         <title>CE popup</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Kulim+Park&display=swap" rel="stylesheet">
     </head>
     <body >
-        <button id="somebutton">Retrieve Data</button>
-        <button id="micAccess">Enable Mic</button>
-        <p >Blog Title</p> 
-        <!-- <p id="paratobefilled"></p> -->
-        <input id="btitle" type="text" value="Some Title" />
-        
-        <p>Blog URL</p>
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="http://www.creationedges.in" target="_blank">
+                        <img src="default.png">
+                    </a>
+                </div>
+                <div class="headr_title">
+                    CREATIONEDGES.IN
+                </div>
+            </div>
+            <div class="main-container">
+                <div class="top-bar">
+                    <button class="retrieve_button btn" id="somebutton">Retrieve Data</button>
+                    <div class="tooltip">
+                        <a id="micAccess" ><img class="gear" style="background-color:aliceblue" src="https://img.icons8.com/wired/64/000000/settings-3.png"></a>
+                        <span class="tooltip_text">Enable Mic</span>
+                    </div>
 
-        <input id="burl" type="text" value="Some URL" />
-        <p>Image URL</p>
+                    <!-- <div class="tooltip">
+                        <span class="tooltiptext">Enable Mic</span>
+                    </div> -->
 
-        <input id="bimgurl" type="text" value="Some Img URL" />
-        <img id="BlogThumb" height="200px" width="200px"/><br/>
-        <input type="file" id="uploadPic"><br/>
-        <button id="ranImg" disabled = "true" >Change Image</button>
-        
-        <p>Blog Description</p>
-
-        <input id="bdesc" type="text" value="Some Description" />
-        <p>Audio</p>
-        <input type="file" accept="audio/*" capture id="uploadAudio">
-        <br />
-        <img src="https://img.icons8.com/carbon-copy/100/000000/microphone.png" width="50" height="50" id="btnStart">
-        <!-- <button controls id="btnStart">Start Recording</button> -->
-        <!-- <button controls id="btnStop">Stop Recording</button> -->
-
-        <!-- <audio controls id="noIdea"></audio> -->
-        
-        <audio controls id="savedAudio"></audio>
-
-        <!-- <audio controls></audio> -->
-        <br />
-
-        <button >Upload </button>
+                    <!-- <button class="gear_button" id="micAccess">Enable Mic</button> -->
+                </div>
+                <div class="scraped_data">
+                    <div class="s_head">
+                        <p>Blog Title</p>
+                    </div>
+                    <div class="s_data">
+                        <input id="btitle" type="text" placeholder="Some Title" value=""/>
+                    </div>
+                    <!-- <p id="paratobefilled"></p> -->
+                    <div class="s_head">
+                        <p>Blog URL</p>
+                    </div>
+                    <div class="s_data">
+                        <input id="burl" type="text" placeholder="Some URL" value=""/>
+                    </div>
+                    <div class="s_head">
+                        <p>Image URL</p>
+                    </div>
+                    <div class="s_data">
+                        <div class="blog_img">
+                            <img class="thumbnail" id="BlogThumb" />
+                        </div>
+                        <button class="btn change_img" id="ranImg" disabled = "true" >Change Image</button>
+                    </div>
+                    <div class="s_data">
+                        <input id="bimgurl" type="text" placeholder="Some Img URL" value=""/>
+                    </div>
+                    <div class="upload_btn">
+                        <button class="btn">Upload Image</button>
+                        <input type="file" id="uploadPic" accept="image/*">
+                    </div>
+                    <div class="s_head">
+                        <p>Blog Description</p>
+                    </div>
+                    <div class="s_data">
+                        <textarea  class="desc" id="bdesc" type="text" placeholder="Some Description" value=""></textarea>
+                    </div>
+                    <div class="s_head">
+                        <p>Audio</p>
+                    </div>
+                    <div class="s_data">
+                        <div class="audiostuff">
+                            <div class="tooltip">
+                                <img src="https://img.icons8.com/carbon-copy/100/000000/microphone.png" width="50" height="50" id="btnStart">
+                                <span class="tooltip_text">Record Audio</span>
+                            </div>
+                            <audio class="audioBar" controls id="savedAudio"></audio>
+                        </div>
+                    </div>
+                    <div class="upload_btn">
+                        <button class="btn">Upload Audio</button>
+                        <input type="file" accept="audio/*" capture id="uploadAudio">
+                    </div>
+                    <br />
+                    <!-- <button controls id="btnStart">Start Recording</button> -->
+                    <!-- <button controls id="btnStop">Stop Recording</button> -->
+                    <!-- <audio controls id="noIdea"></audio> -->
+                    <!-- <audio controls></audio> -->
+                    <br />
+                </div>
+            </div>
+            <div class="footer">
+                <button class="final_button btn">Upload Data</button>
+            </div>
+        </div>
         <script src="popup.js"></script>
         <script src="enableMicrophone.js"></script>
         <script src="audio.js"></script>
