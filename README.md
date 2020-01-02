@@ -6,4 +6,4 @@ It also provides the facility to upload media like Images and Audio files from t
 
 Screen Shot after CSS update of popup.HTML page :
 
-![ScreenShot_of_POPUP.HTML](/CE extension/SS01.jpg)
+![ScreenShot](/CE extension/SS01.jpg)
