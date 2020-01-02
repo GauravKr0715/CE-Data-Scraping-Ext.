@@ -1,0 +1,308 @@
+html {
+    height: 700px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kulim Park', sans-serif;
+    margin: 0px;
+    height: 1000px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    font-size: 16px;
+    padding: 20px;/* maybe 20px*/
+    background-color: #2d3d58;
+    /* margin: 20px; */
+    height: 100%;
+    width: 450px;
+    box-shadow: 5px 10px 10px #aaaaaa;
+}
+
+.header {
+    display: flex;
+    padding: 5px;
+    justify-content: flex-start;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    background-color: #232F42;
+    box-shadow: 2px 2px 5px;
+}
+
+.logo {
+    padding: 5px 5px;
+}
+
+.logo img {
+    height: 65px;
+    width: 75px;
+}
+
+.headr_title {
+    padding: 10px 10px;
+    padding-right: 15px;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+/* 
+.main-container {
+    padding: 10px;
+} */
+
+.top-bar {
+    padding: 10px 0;
+    position: relative;
+    height: 70px;
+}
+
+.retrieve_button {
+    position: absolute;
+    left: 32%;
+    top: 15px;
+    width: 150px;
+    height: 40px;
+}
+
+.btn {
+    font-family: 'Kulim Park', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    background-color: #14233b;
+    border: none;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.gear {
+    transition-property: transform, color;
+    transition-duration: 1s;    
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.gear:hover {
+    transform: rotate(-180deg); 
+}
+
+.tooltip .tooltip_text {
+    visibility: hidden;
+    position: absolute;
+    right: 101%;
+    text-align: center;
+    background-color: #555;
+    font-size: 15px;
+    padding: 5px 0;
+    width: 90px;
+    border-radius: 6px;
+    color: #ffffff;
+    z-index: 1;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltip_text::after {
+    content: "";
+    position: absolute;
+    right: -5%;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    
+    border-left: 7px solid #555;;
+
+}
+
+.tooltip:hover .tooltip_text {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+/* .gear_button {
+    position: absolute;
+    right: 5px;
+    top: 15px;
+} */
+
+
+
+.scraped_data {
+    width: 100%;
+    padding: 5px;
+    height: 770px;
+}
+
+.s_head {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #c9bfbf;
+}
+
+.s_head p {
+    margin: 10px 0px;
+}
+
+.s_data {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin: 5px 0px;
+}
+
+.s_data input {
+    background-color: #232F42;
+    border: none;
+    width: 100%;
+    height: 35px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    margin: 5px 5px;
+    padding: 0px 5px;
+}
+
+.blog_img {
+    text-align: center;
+}
+
+.thumbnail {
+    width: 350px;
+    height: 150px;
+    display: inline-block;
+}
+
+.change_img {
+    position: absolute;
+    right: 27px;
+    bottom: 5px;
+    height: 30px;
+    width: 150px;
+}
+
+.s_data .desc {
+    background-color: #232F42;
+    border: none;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    margin: 0px 5px;
+    font-family: 'Kulim Park', sans-serif;
+}
+
+.upload_btn {
+    padding: 5px 0;
+    position: relative;
+    height: 50px;
+}
+
+.upload_btn button{
+    position: absolute;
+    left: 32%;
+    top: 10px;
+    width: 150px;
+    height: 30px; 
+    cursor: pointer;   
+}
+
+.upload_btn input[type=file] {
+    position: absolute;
+    left: 32%;
+    top: 5px;
+    width: 150px;
+    height: 30px; 
+    opacity: 0;
+    cursor: pointer;
+}
+
+.s_data .audiostuff {
+    height: 50px;
+    padding: 5px 0px;
+    position: relative;
+}  
+
+.audiostuff .tooltip {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.audiostuff img {
+    transition: transform;
+    transition-duration: 1s;
+}
+
+.audiostuff img:hover {
+    transform: rotateY(180deg);
+}
+
+.audiostuff .tooltip .tooltip_text {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 120%;
+    left: 67%;
+    z-index: 1;
+}
+
+.audiostuff .tooltip:hover .tooltip_text {
+    visibility: visible;
+    width: 100px;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.audiostuff .tooltip .tooltip_text::after {
+    content: "";
+    border-bottom: 7px solid #555;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    position: absolute;
+    bottom: 100%;
+    right: 41%;
+}
+
+.audiostuff .audioBar {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    height: 40px;
+}
+
+.footer {
+    position: relative;
+    height: 50px;
+    padding: 5px 5px;
+    text-align: center;
+}
+
+.footer .final_button {
+    width: 400px;
+    height: 40px;
+}
