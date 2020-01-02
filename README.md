@@ -6,4 +6,4 @@ It also provides the facility to upload media like Images and Audio files from t
 
 Screen Shot after CSS update of popup.HTML page :
 
-![ScreenShot](/CE extension/SS01.jpg)
+![ScreenShot](https://github.com/GauravKr0715/CE-Data-Scraping-Ext./blob/master/CE%20extension/SS01.jpg)
